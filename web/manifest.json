@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "myapp",
     "short_name": "myapp",
+=======
+    "name": "flutterpractice",
+    "short_name": "flutterpractice",
+>>>>>>> dfdd1064b69ec00931b9b2f3452c2b5253582256
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
