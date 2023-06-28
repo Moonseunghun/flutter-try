@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         home: Scaffold(
             appBar: AppBar(
               title: Text("babtong"),
-              backgroundColor: Colors.amber,
+              backgroundColor: Colors.amber[700],
             ),
             // body: Row(
             //   children: [
