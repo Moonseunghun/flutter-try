@@ -83,7 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
             body: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[Text('bye'), Text('bye'), Text('bye')],
+                children: <Widget>[
+                  Text(
+                    'Name',
+                    style: TextStyle(color: Colors.white, letterSpacing: 2.0),
+                  )
+                ],
               ),
             )
             // bottomNavigationBar: BottomAppBar(
