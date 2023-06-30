@@ -80,14 +80,26 @@ class _MyHomePageState extends State<MyHomePage> {
             //     ),
             //   ],
             // ),
-            body: Center(
+            body: Padding(
+              padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Name',
-                    style: TextStyle(color: Colors.white, letterSpacing: 2.0),
-                  )
+                    'NAME',
+                    style: TextStyle(color: Colors.black, letterSpacing: 2.0),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    'bbatong',
+                    style: TextStyle(
+                        color: Colors.black,
+                        letterSpacing: 2.0,
+                        fontSize: 28.0,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             )
