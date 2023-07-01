@@ -100,6 +100,30 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 28.0,
                         fontWeight: FontWeight.bold),
                   ),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Text(
+                    'BrantoPowerLevel',
+                    style: TextStyle(color: Colors.black, letterSpacing: 2.0),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    '14Level',
+                    style: TextStyle(
+                        color: Colors.black,
+                        letterSpacing: 2.0,
+                        fontSize: 28.0,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(Icons.check_circle_outline),
+                      Text('using lightSaber', style: TextStyle(fontSize: 16.0))
+                    ],
+                  )
                 ],
               ),
             )
