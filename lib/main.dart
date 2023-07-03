@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       SizedBox(
                         width: 10.0,
                       ),
-                      Text('face hero tattoo',
+                      Text('face interactions',
                           style: TextStyle(fontSize: 16.0, letterSpacing: 1.0))
                     ],
                   ),
