@@ -43,7 +43,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text("babtong"),
+              title: Text("application bar"),
+              centerTitle: true,
+              elevation: 0.0,
+              leading: IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () => {},
+              ),
+              // onPressed: (),
               backgroundColor: Colors.amber[700],
             ),
             // body: Row(
