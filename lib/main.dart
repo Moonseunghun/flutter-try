@@ -46,17 +46,54 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("application bar"),
               centerTitle: true,
               elevation: 0.0,
-              leading: IconButton(
-                icon: Icon(Icons.menu),
-                onPressed: () => {print('clicked menu')},
-              ),
+              // leading: IconButton(
+              //   icon: Icon(Icons.menu),
+              //   onPressed: () => {print('clicked menu')},
+              // ),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.shopping_cart),
-                  onPressed: () => {print('clicked menu')},
+                  icon: Icon(Icons.shopping_bag_outlined),
+                  onPressed: () => {print('clicked')},
+                ),
+                IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: () => {print('clicked search')},
                 ),
               ],
               backgroundColor: Colors.amber[700],
+            ),
+            drawer: Drawer(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  UserAccountsDrawerHeader(
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: AssetImage('asset/seunghun.jpg'),
+                      backgroundColor: Colors.white,
+                    ),
+                    otherAccountsPictures: <Widget>[
+                      CircleAvatar(
+                        backgroundImage: AssetImage('asset/seunghun.jpg'),
+                        backgroundColor: Colors.white,
+                      ),
+                      // CircleAvatar(
+                      //   backgroundImage: AssetImage('asset/seunghun.jpg'),
+                      //   backgroundColor: Colors.white,
+                      // ),
+                    ],
+                    accountName: Text('승훈'),
+                    accountEmail: Text('mangokkaksae2@gmail.com'),
+                    onDetailsPressed: () {
+                      print('clicked details');
+                    },
+                    decoration: BoxDecoration(
+                        color: Colors.red[200],
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(40.0),
+                            bottomRight: Radius.circular(40.0))),
+                  )
+                ],
+              ),
             ),
             // body: Row(
             //   children: [
