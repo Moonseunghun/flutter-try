@@ -91,6 +91,39 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(40.0),
                             bottomRight: Radius.circular(40.0))),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.home,
+                      color: Colors.grey[850],
+                    ),
+                    title: Text('home'),
+                    onTap: () {
+                      print('clicked home');
+                    },
+                    trailing: Icon(Icons.add),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.settings,
+                      color: Colors.grey[850],
+                    ),
+                    title: Text('settings'),
+                    onTap: () {
+                      print('clicked home');
+                    },
+                    trailing: Icon(Icons.add),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.question_answer,
+                      color: Colors.grey[850],
+                    ),
+                    title: Text('QnA'),
+                    onTap: () {
+                      print('clicked home');
+                    },
+                    trailing: Icon(Icons.add),
                   )
                 ],
               ),
