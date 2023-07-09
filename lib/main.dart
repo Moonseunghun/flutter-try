@@ -30,13 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  String message = '';
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +78,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     accountName: Text('승훈'),
                     accountEmail: Text('mangokkaksae2@gmail.com'),
                     onDetailsPressed: () {
-                      print('clicked details');
+                      setState(() {
+                        message = '망했다';
+                        Text(message);
+                      });
                     },
                     decoration: BoxDecoration(
                         color: Colors.red[200],
@@ -124,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       print('clicked home');
                     },
                     trailing: Icon(Icons.add),
-                  )
+                  ),
                 ],
               ),
             ),
