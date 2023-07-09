@@ -48,9 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
               elevation: 0.0,
               leading: IconButton(
                 icon: Icon(Icons.menu),
-                onPressed: () => {},
+                onPressed: () => {print('clicked menu')},
               ),
-              // onPressed: (),
+              actions: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.shopping_cart),
+                  onPressed: () => {print('clicked menu')},
+                ),
+              ],
               backgroundColor: Colors.amber[700],
             ),
             // body: Row(
