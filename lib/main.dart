@@ -125,6 +125,15 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      // body: Builder(builder: (BuildContext context) => {
+      //   retutn Center(
+      //     child: FlatButton(
+      //       child: Text('Show me ' ,
+      //       style: TextStyle(color: Colors.whit),
+      //       )
+      //     ),
+      //   )
+      // })
       // body: Row(
       //   children: [
       //     Container(
@@ -159,80 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ),
       //   ],
       // ),
-      // body: Padding(
-      //   padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
-      //   child: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: <Widget>[
-      //       Text(
-      //         'NAME',
-      //         style: TextStyle(color: Colors.black, letterSpacing: 2.0),
-      //       ),
-      //       SizedBox(
-      //         height: 10.0,
-      //       ),
-      //       Text(
-      //         'bbatong',
-      //         style: TextStyle(
-      //             color: Colors.black,
-      //             letterSpacing: 2.0,
-      //             fontSize: 28.0,
-      //             fontWeight: FontWeight.bold),
-      //       ),
-      //       SizedBox(
-      //         height: 30.0,
-      //       ),
-      //       Text(
-      //         'BrantoPowerLevel',
-      //         style: TextStyle(color: Colors.black, letterSpacing: 2.0),
-      //       ),
-      //       SizedBox(
-      //         height: 10.0,
-      //       ),
-      //       Text(
-      //         '14Level',
-      //         style: TextStyle(
-      //             color: Colors.black,
-      //             letterSpacing: 2.0,
-      //             fontSize: 28.0,
-      //             fontWeight: FontWeight.bold),
-      //       ),
-      //       SizedBox(
-      //         height: 30.0,
-      //       ),
-      //       Row(
-      //         children: <Widget>[
-      //           Icon(Icons.check_circle_outline),
-      //           SizedBox(
-      //             width: 10.0,
-      //           ),
-      //           Text('using lightSaber',
-      //               style: TextStyle(fontSize: 16.0, letterSpacing: 1.0))
-      //         ],
-      //       ),
-      //       Row(
-      //         children: <Widget>[
-      //           Icon(Icons.check_circle_outline),
-      //           SizedBox(
-      //             width: 10.0,
-      //           ),
-      //           Text('face interactions',
-      //               style: TextStyle(fontSize: 16.0, letterSpacing: 1.0))
-      //         ],
-      //       ),
-      //       Row(
-      //         children: <Widget>[
-      //           Icon(Icons.check_circle_outline),
-      //           SizedBox(
-      //             width: 10.0,
-      //           ),
-      //           Text('fire flames',
-      //               style: TextStyle(fontSize: 16.0, letterSpacing: 1.0))
-      //         ],
-      //       ),
-      //     ],
-      //   ),
-      // )
+
       // bottomNavigationBar: BottomAppBar(
       //     child: Row(
       //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -244,4 +180,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // )),
     ));
   }
+
+  FlatButton() {}
 }
