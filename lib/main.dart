@@ -204,13 +204,12 @@ class _AddProductPageState extends State<AddProductPage> {
         id: _generateProductId(),
         title: name,
         price: price,
-        category: '', // Fill in the category value if you have it
-        description: '', // Fill in the description value if you have it
-        image: '', // Fill in the image URL if you have it
+        category: '',
+        description: '',
+        image: '',
       );
 
       try {
-        // Call the API to add the product
         Product addedProduct = await ApiService.addProduct(newProduct);
 
         Navigator.pop(context, addedProduct);
@@ -222,7 +221,6 @@ class _AddProductPageState extends State<AddProductPage> {
     }
   }
 
-  // A simple method to generate a unique product id for demonstration purposes
   int _generateProductId() {
     return DateTime.now().millisecondsSinceEpoch;
   }
