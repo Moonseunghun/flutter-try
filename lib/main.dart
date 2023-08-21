@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+//리펙토링 중
 void main() {
   runApp(EcommerceApp());
 }
