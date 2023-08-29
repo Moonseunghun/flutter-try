@@ -5,7 +5,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    var scaffold = Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text(
@@ -120,5 +120,6 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+    return scaffold;
   }
 }
