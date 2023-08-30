@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text(
-          'Sign In',
+          'kakao Sign In',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
