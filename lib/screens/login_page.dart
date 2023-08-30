@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+class AuthProvider extends ChangeNotifier {
+  void loginWithGoogle() {}
+  // 여기에 로그인과 관련된 상태와 메서드를 구현하세요.
+}
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key, Key? ke});
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var scaffold = Scaffold(
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text(
@@ -23,7 +31,10 @@ class LoginPage extends StatelessWidget {
             ButtonTheme(
               height: 50.0,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Google 로그인 호출
+                  authProvider.loginWithGoogle();
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
@@ -40,10 +51,6 @@ class LoginPage extends StatelessWidget {
                       'Login with Google',
                       style: TextStyle(color: Colors.black87, fontSize: 15.0),
                     ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Image.asset('images/glogo.png'),
-                    ),
                   ],
                 ),
               ),
@@ -51,75 +58,22 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: 10.0,
             ),
-            ButtonTheme(
-              height: 50.0,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF334D92),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(4.0),
-                    ),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Image.asset('images/flogo.png'),
-                    Text(
-                      'Login with Facebook',
-                      style: TextStyle(color: Colors.white, fontSize: 15.0),
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Image.asset('images/glogo.png'),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            ButtonTheme(
-              height: 50.0,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(4.0),
-                    ),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Icon(
-                      Icons.mail,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      'Login with Email',
-                      style: TextStyle(color: Colors.white, fontSize: 15.0),
-                    ),
-                    Opacity(
-                      opacity: 0.0,
-                      child: Icon(
-                        Icons.mail,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            // Facebook 로그인 버튼과 Email 로그인 버튼도 유사한 방식으로 구현
           ],
         ),
       ),
     );
-    return scaffold;
   }
+}
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => AuthProvider(),
+      child: MaterialApp(
+        title: 'Login App',
+        home: LoginPage(),
+      ),
+    ),
+  );
 }
