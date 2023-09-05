@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 
 class AuthProvider extends ChangeNotifier {
   void loginWithGoogle() {}
-  // 여기에 로그인과 관련된 상태와 메서드를 구현하세요.
 }
 
 class LoginPage extends StatelessWidget {
